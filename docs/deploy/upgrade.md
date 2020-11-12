@@ -24,16 +24,16 @@ spec:
     spec:
       containers:
         - name: nginx-ingress-controller
-          image: k8s.gcr.io/ingress-nginx/controller:v0.34.0@sha256:56633bd00dab33d92ba14c6e709126a762d54a75a6e72437adefeaaca0abb069
+          image: k8s.gcr.io/ingress-nginx/controller:v0.41.2@sha256:1f4f402b9c14f3ae92b11ada1dfe9893a88f0faeb0b2f4b903e2c67a0c3bf0de
           args: ...
 ```
 
-simply change the `0.34.0` tag to the version you wish to upgrade to.
+simply change the `0.41.2` tag to the version you wish to upgrade to.
 The easiest way to do this is e.g. (do note you may need to change the name parameter according to your installation):
 
 ```
 kubectl set image deployment/nginx-ingress-controller \
-  nginx-ingress-controller=k8s.gcr.io/ingress-nginx/controller:v0.34.1@sha256:0e072dddd1f7f8fc8909a2ca6f65e76c5f0d2fcfb8be47935ae3457e8bbceb20 \
+  nginx-ingress-controller=k8s.gcr.io/ingress-nginx/controller:v0.41.2@sha256:1f4f402b9c14f3ae92b11ada1dfe9893a88f0faeb0b2f4b903e2c67a0c3bf0de \
   -n ingress-nginx
 ```
 
